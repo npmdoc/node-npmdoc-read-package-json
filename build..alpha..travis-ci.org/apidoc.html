@@ -63,6 +63,15 @@
 
         <li>
 
+            <a class="apidocElementLiA" href="#apidoc.element.read-package-json.read-package-json">
+            function <span class="apidocSignatureSpan"></span>read-package-json
+            <span class="apidocSignatureSpan">(file, log_, strict_, cb_)</span>
+            </a>
+
+        </li>
+
+        <li>
+
             <a class="apidocElementLiA" href="#apidoc.element.read-package-json.extras">
             function <span class="apidocSignatureSpan">read-package-json.</span>extras
             <span class="apidocSignatureSpan">(file, data, log_, strict_, cb_)</span>
@@ -158,6 +167,33 @@
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.read-package-json" id="apidoc.module.read-package-json">module read-package-json</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.read-package-json.read-package-json" id="apidoc.element.read-package-json.read-package-json">
+        function <span class="apidocSignatureSpan"></span>read-package-json
+        <span class="apidocSignatureSpan">(file, log_, strict_, cb_)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function readJson(file, log_, strict_, cb_) {
+  var log, strict, cb
+  for (var i = 1; i &#x3c; arguments.length - 1; i++) {
+    if (typeof arguments[i] === &#x27;boolean&#x27;) {
+      strict = arguments[i]
+    } else if (typeof arguments[i] === &#x27;function&#x27;) {
+      log = arguments[i]
+    }
+  }
+
+  if (!log) log = function () {}
+  cb = arguments[ arguments.length - 1 ]
+
+  readJson_(file, log, strict, cb)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
 
 
     <h2>
